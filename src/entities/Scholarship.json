@@ -1,0 +1,72 @@
+{
+  "name": "Scholarship",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the scholarship"
+    },
+    "institutedBy": {
+      "type": "string",
+      "description": "Person or organization that instituted the scholarship"
+    },
+    "inMemoryOf": {
+      "type": "string",
+      "description": "Person in whose memory the scholarship is given"
+    },
+    "amount": {
+      "type": "string",
+      "description": "Scholarship amount (e.g. ₹25,00,000)"
+    },
+    "beneficiaries": {
+      "type": "string",
+      "description": "Description of who can benefit and how many"
+    },
+    "beneficiaryCount": {
+      "type": "number",
+      "description": "Total number of beneficiaries"
+    },
+    "eligibility": {
+      "type": "string",
+      "description": "Eligibility criteria"
+    },
+    "branch": {
+      "type": "string",
+      "enum": ["CSE", "ECE", "EEE", "ME", "CE", "Any"],
+      "description": "Eligible branch"
+    },
+    "genderEligibility": {
+      "type": "string",
+      "enum": ["Girls Only", "Boys Only", "Any"],
+      "description": "Gender eligibility"
+    },
+    "yearEligibility": {
+      "type": "string",
+      "description": "Year of study eligibility"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["alumni", "other", "government", "private"],
+      "description": "Category of scholarship"
+    },
+    "source": {
+      "type": "string",
+      "enum": ["JNTUA CEA", "Buddy4Study", "NSP (scholarships.gov.in)", "Other"],
+      "description": "Source/portal of the scholarship"
+    },
+    "applyUrl": {
+      "type": "string",
+      "description": "URL to apply for the scholarship"
+    },
+    "deadline": {
+      "type": "string",
+      "description": "Application deadline (e.g. 31 Jul 2026)"
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Tags for filtering"
+    }
+  },
+  "required": ["name", "amount", "category"]
+}
